@@ -1,5 +1,5 @@
 package personnages;
-
+TEST
 public class Romain {
 	private String nom;
 	private int force;
@@ -11,7 +11,7 @@ public String getNom() {
 	return nom;
 }
 public void parler(String texte) {
-	System.out.println(prendreParole() + "« " + texte + "»");
+	System.out.println(prendreParole() + "ï¿½ " + texte + "ï¿½");
 }
 private String prendreParole() {
 	return "Le romain " + nom + " : ";
@@ -19,7 +19,7 @@ private String prendreParole() {
 public void recevoirCoup(int forceCoup) {
 force -= forceCoup;
 	if (force > 0) {
-		parler("Aïe");
+		parler("Aï¿½e");
 	} else {
 		parler("J'abandonne...");
 }
