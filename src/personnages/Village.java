@@ -1,5 +1,5 @@
 package personnages;
-
+TEST
 public class Village {
 	private String nom;
 	private Chef chef;
@@ -28,10 +28,10 @@ public class Village {
 	}
 	public static void main(String[] args) {
 
-		Village village = new Village("“Village des Irréductibles" , 30);
+		Village village = new Village("ï¿½Village des Irrï¿½ductibles" , 30);
 //		Gaulois gaulois = village.trouverHabitant(30);
 //	Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 30
-//	de 0 à 29
+//	de 0 ï¿½ 29
 		Chef Abraracourcix = new Chef("Abraracourcix", 6, village);
 		village.setChef(Abraracourcix);
 		Gaulois Asterix = new Gaulois("Asterix",8);
@@ -39,12 +39,12 @@ public class Village {
 //		Gaulois gaulois = village.trouverHabitant(1);
 //		System.out.println(gaulois);
 //		null
-//		ça prend la 2eme position
+//		ï¿½a prend la 2eme position
 		village.afficherVillageois();
 		
 	}
 	public void afficherVillageois () {
-		System.out.println("Dans le village du chef" + chef.getNom() + "vivent les légendaires gaulois :");
+		System.out.println("Dans le village du chef" + chef.getNom() + "vivent les lï¿½gendaires gaulois :");
 		for (int i = 0; i < nbVillageois; i++) {
 			System.out.println("-"+ villageois[i].getNom());
 			
