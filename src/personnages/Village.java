@@ -1,5 +1,5 @@
 package personnages;
-TEST
+
 public class Village {
 	private String nom;
 	private Chef chef;
@@ -40,6 +40,8 @@ public class Village {
 //		System.out.println(gaulois);
 //		null
 //		�a prend la 2eme position
+		Gaulois obelix = new Gaulois("Obelix",25);
+		village.ajouterHabitant(obelix);
 		village.afficherVillageois();
 		
 	}
