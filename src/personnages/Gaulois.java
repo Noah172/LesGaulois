@@ -1,5 +1,7 @@
 package personnages;
 
+import villagegaulois.Musee;
+
 public class Gaulois {
 	private String nom;
 	private int force;
@@ -45,6 +47,15 @@ public class Gaulois {
 		gaulois.parler(" Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée");
 
 	}
+    public void faireUneDonation(Musee musee) {
+	if (nbtrophees > 0) parler("Je donne au musee tous mes trophees :");
+	for (int i = 0;i<nbtrophees;i++) {
+		musee.donnerTrophee(this, trophees[i]);		// le this se refere lui-meme, (on est dans gaulois)
+		System.out.println("-" + trophees[i].toString());
+		trophees[i] = null;
+	}
+	nbtrophees = 0;
+}
 
 //	TP3
 	private String prendreParole() {
