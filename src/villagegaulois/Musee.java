@@ -2,12 +2,13 @@ package villagegaulois;
 
 
 import personnages.Equipement;
+import personnages.Gaulois;
 
 public class Musee {
 	private Trophee[] tableauTrophee = new Trophee[200];
 	private int nbTrophee = 0;
 	
-	public void donnerTrophee(personnages.Gaulois gaulois,Equipement equipement) {
+	public void donnerTrophee(Gaulois gaulois,Equipement equipement) {
 		Trophee trophee = new Trophee(gaulois,equipement);
 		tableauTrophee[nbTrophee] = trophee;
 		nbTrophee ++;
