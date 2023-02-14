@@ -54,7 +54,7 @@ public class Druide {
 		}
 	}
 	public void booster(Druide druide,Gaulois gaulois) {
-		if (gaulois.getNom() == "Obélix") {
+		if (gaulois.getNom().equals("Obélix")) {
 			druide.parler("Non, Obélix !... Tu n’auras pas de potion magique ! ");
 			gaulois.parler("Par Bélénos, ce n'est pas juste !");
 		} else {

@@ -44,16 +44,18 @@ public class Romain {
 			if (romain.equipement[0] == equipement) {
 				System.out.println("Le soldat " + romain.nom + " possède déjà un " + equipement + " !");
 			} else {
-				romain.equipement[1] = equipement;
-				System.out.println("Le soldat " + romain.nom + " s'équipe avec un " + equipement + ".");
-				nbEquipement += 1;
+				ajouterEquipement(equipement, romain);
 			}
 			break;
 		default:
-			romain.equipement[0] = equipement;
-			System.out.println("Le soldat " + romain.nom + " s'équipe avec un " + equipement + ".");
-			nbEquipement += 1;
+			ajouterEquipement(equipement, romain);
 		}
+	}
+
+	private void ajouterEquipement(Equipement equipement, Romain romain) {
+		romain.equipement[nbEquipement] = equipement;
+		System.out.println("Le soldat " + romain.nom + " s'équipe avec un " + equipement + ".");
+		nbEquipement++;
 	}
 
 	public static void main(String[] args) {
@@ -70,7 +72,7 @@ public class Romain {
 
 //	TP3
 	public Equipement[] recevoirCoup(int forceCoup) {
-		Equipement[] equipementEjecte = null;
+		Equipement[] equipementEjecte;
 		// précondition
 		assert force > 0;
 		int oldForce = force;
@@ -84,6 +86,7 @@ public class Romain {
 		// }
 		if (force == 0) {
 			parler("Aïe");
+			equipementEjecte=new Equipement[0];
 		} else {
 			equipementEjecte = ejecterEquipement();
 			parler("J'abandonne...");
@@ -103,13 +106,13 @@ public class Romain {
 		System.out.println("L'équipement de " + nom + "s'envole sous la force du coup.");
 		int nbEquipementEjecte = 0;
 		for (int i = 0; i < nbEquipement; i++) {
-			if (equipement[i] == null) {
-			} else {
+			if (equipement[i] != null) {
 				equipementEjecte[nbEquipementEjecte] = equipement[i];
 				nbEquipementEjecte++;
 				equipement[i] = null;
 			}
 		}
+		nbEquipement = 0;
 		return equipementEjecte;
 	}
 
