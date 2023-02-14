@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 166ecc0a0dbf626b516a248c9ebbbdfccac8e5eb
 package villagegaulois;
 
 import personnages.Equipement;
